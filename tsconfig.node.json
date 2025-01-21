@@ -1,24 +1,29 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
     "lib": ["ES2023"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "skipLibCheck": true,
+    "jsx": "react-jsx",
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Router */
+    "composite": true,
+    "outDir": "./dist"
   },
-  "include": ["vite.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"], // .tsx도 포함
+  "exclude": ["node_modules", "dist"] // 절대 경로 대신 상대 경로
 }

@@ -1,23 +1,24 @@
 * 현재는 예시이며, react공식문서에 따라 확장해 나갈 계획.
 * react 공식문서 : https://legacy.reactjs.org/docs/faq-structure.html
+
 /src
-├── 00.core                  	* 0. 기본설정 : 진입점과 라우팅 *
+├── 00_core                  	* 0. 기본설정 : 진입점과 라우팅 *
 │    ├── App.tsx             	-> 메인 라우터 및 레이아웃 구성
-│    ├── main.tsx            	-> ReactDOM 렌더링
+│    └── main.tsx            	-> ReactDOM 렌더링
 │    └── routes.tsx          	-> React Router 설정
 │
-├── 01.components            	* 1. 컴포넌트 : 공통사용 *
-│    ├── Navbar		     	    -> 네비게이션 폴더	
+├── 01_components            	* 1. 컴포넌트 : 공통사용 *
+│    ├── 00_Navbar		     	    -> 네비게이션 폴더	
 │    │    ├── Navbar.tsx     	-> 네비게이션 tsx	
 │    │    └── Navbar.module.css -> 네비게이션 css  
-│    └── Footer			        -> 푸터 폴더
+│    └── 01_Footer			        -> 푸터 폴더
 │         ├── Footer.tsx	    -> 푸터 tsx
 │         └── Footer.module.css -> 푸터 css
 │        
-├── 02.pages                    * 2. 페이지 전용 폴더 *
+├── 02_pages                    * 2. 페이지 전용 폴더 *
 │    └── MainPage               -> 메인 페이지 폴더
 │    
-├── 03.assets                   * 3. 프로젝트 참고파일 *
+├── 03_assets                   * 3. 프로젝트 참고파일 *
 │    ├── images/                -> 정적 이미지 (로고, 배너 등)
 │    └── fonts/                 -> 폰트 파일 (웹 폰트 포함)
 │ 
