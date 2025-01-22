@@ -1,1 +1,7 @@
-// 향후 작업예정
+// URL 경로설정
+const routes = {
+    MainPage: "/",
+    NftMarketPage: "/NftMarketPage",
+  };
+  
+  export default routes;
