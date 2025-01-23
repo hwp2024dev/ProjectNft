@@ -1,6 +1,11 @@
 * 현재는 예시이며, react공식문서에 따라 확장해 나갈 계획.
 * react 공식문서 : https://legacy.reactjs.org/docs/faq-structure.html
 
+* 변경점
+[1/22]
+1. components 구조변경.
+2. Pages 내용추가.(NftMarketPage)
+
 /src
 ├── 00_core                  	* 0. 기본설정 : 진입점과 라우팅 *
 │    ├── App.tsx             	-> 메인 라우터 및 레이아웃 구성
@@ -8,16 +13,16 @@
 │    └── routes.tsx          	-> React Router 설정
 │
 ├── 01_components            	* 1. 컴포넌트 : 공통사용 *
-│    ├── 00_Navbar		     	    -> 네비게이션 폴더	
-│    │    ├── Navbar.tsx     	-> 네비게이션 tsx	
-│    │    └── Navbar.module.css -> 네비게이션 css  
-│    └── 01_Footer			        -> 푸터 폴더
-│         ├── Footer.tsx	    -> 푸터 tsx
-│         └── Footer.module.css -> 푸터 css
-│        
-├── 02_pages                    * 2. 페이지 전용 폴더 *
-│    └── MainPage               -> 메인 페이지 폴더
-│    
+│    └── 00_Layout		        -> 반응형 대응(Header,Footer대처)
+│    	  └── Layout.tsx        -> Header,각Router 별Pages,Footer의 구조를 갖는다.
+│         └── LayoutModule.css  -> 상기 파일의 태그에 반응형 css 반영
+│
+├── 02_pages                    * 2. 페이지 : 각 페이지 관리폴더 *
+│    └── 00_MainPage            -> MainPage 폴더
+│    │	  └── MainPage.tsx      -> MainPage 페이지
+│    └── 01_NftMarketPage       -> NftMarketPage 폴더   
+│    	  └── NftMarketPage.tsx -> NftMarketPage 페이지
+│	
 ├── 03_assets                   * 3. 프로젝트 참고파일 *
 │    ├── images/                -> 정적 이미지 (로고, 배너 등)
 │    └── fonts/                 -> 폰트 파일 (웹 폰트 포함)
