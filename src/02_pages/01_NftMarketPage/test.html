@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWEEN.js Test</title>
+</head>
+<body>
+  <script type="module">
+    import TWEEN from 'https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@25.0.0/dist/tween.esm.js';
+
+    const position = { x: 0, y: 0, z: 0 };
+
+    // 코드 확인결과 TWEEN사용법이 업데이트 되어서 작동이 안된문제, 콘솔로그로 확인!!
+    const group = new TWEEN.Group();
+    const tween = new TWEEN.Tween(position, group)
+    .to({ x: 100, y: 100, z: 100 }, 2000)
+    .onStart(() => console.log('Tween started'))
+    .onUpdate(() => console.log('Updating:', position))
+    .onComplete(() => console.log('Tween complete'))
+    .start();
+
+    function animate() {
+    requestAnimationFrame(animate);
+
+    const time = performance.now();
+    group.update(time); // 그룹 업데이트
+    }
+
+    animate();
+  </script>
+</body>
+</html>

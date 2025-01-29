@@ -48,3 +48,17 @@ export default tseslint.config({
   },
 })
 ```
+## Attribution
+
+This NftMarketPage is based on the [Three.js CSS3D Periodic Table Example](https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html).
+
+- Copyright (c) 2010-2023 three.js authors
+- Licensed under [MIT License](https://opensource.org/licenses/MIT)
+
+Based on Three.js CSS3D Periodic Table Example
+-Copyright (c) 2010-2023 three.js authors-
+License: MIT
+Source: https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html
+
+-Customized for portfolio use-
+-Copyright (c) 2025 Hyunwoo Park-

@@ -22,13 +22,12 @@ function Layout({ children }: { children: React.ReactNode; }) {
           <a href="/NftInfoPage" className="text-decoration-none text-reset">NftInfoPage</a>
         </nav>
       </header>
-      <main className="flex-grow-1 p-4" style={{ height: "80vh" }}>
+      <main className="flex-grow-1" style={{ height: "80vh", backgroundColor:"black", color:"white"}}>
       {/* 메인 영역 */}
       {/* flex-grow-1: 남은 공간을 모두 차지 (Main 영역 확장) */}
-      {/* p-4: 내부 여백(Padding)을 1.5rem로 설정 */}
       {children}
       </main>
-      <footer className="d-flex justify-content-center align-items-center text-center p-3" style={{ height: "10vh" , backgroundColor: "#6CA0DC" }}>
+      <footer className="d-flex justify-content-center align-items-center text-center p-3" style={{ height: "10vh" , backgroundColor: "#6CA0DC", }}>
       {/* 푸터 영역 */}
       {/* d-flex: Flexbox 활성화 */}
       {/* justify-content-between: 자식 요소를 좌우로 정렬 (양쪽 정렬) */}
