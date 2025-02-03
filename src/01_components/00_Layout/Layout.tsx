@@ -22,7 +22,7 @@ function Layout({ children }: { children: React.ReactNode; }) {
           <a href="/NftInfoPage" className="text-decoration-none text-reset">NftInfoPage</a>
         </nav>
       </header>
-      <main className="flex-grow-1" style={{ height: "80vh", backgroundColor:"black", color:"white"}}>
+      <main className="flex-grow-1" style={{ height: "80vh"}}>
       {/* 메인 영역 */}
       {/* flex-grow-1: 남은 공간을 모두 차지 (Main 영역 확장) */}
       {children}

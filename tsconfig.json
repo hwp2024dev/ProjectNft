@@ -3,16 +3,17 @@
     "baseUrl": "./",
     "paths": {
       //vite.config.ts와 같은경로로 설정해준다.
+      "@/*":["*"],
       "@core/*": ["src/00_core/*"],           // @core 별칭
       "@components/*": ["src/01_components/*"], // @components 별칭
       "@pages/*": ["src/02_pages/*"], // @pages 별칭
       "three/examples/jsm/*": ["node_modules/three/examples/jsm/*"],
       "typeRoots": ["./node_modules/@types", "./src/types"]
     },
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true, // JSON도 자동으로 인식
     "target": "ES2022",
-    "module": "NodeNext",
     "lib": ["ES2022", "DOM"],
     "jsx": "react-jsx",
     "strict": true,
@@ -20,6 +21,6 @@
     "emitDeclarationOnly": true, // 타입 선언 파일만 생성
     "composite": true
   },
-  "include": ["src/**/*"],
+  "include": ["src", "src/global.d.ts", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist"],
 }

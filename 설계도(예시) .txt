@@ -5,6 +5,13 @@
 [1/22]
 1. components 구조변경.
 2. Pages 내용추가.(NftMarketPage)
+[1/29]
+3. NftMarketPage 기능추가.
+4. three.js 추가.
+[2/3]
+5. NftMarketPage에 상품(테이블) 객체 랜더링 기능추가.
+6. 관련 설정 조정.(config부분)
+
 
 /src
 ├── 00_core                  	* 0. 기본설정 : 진입점과 라우팅 *

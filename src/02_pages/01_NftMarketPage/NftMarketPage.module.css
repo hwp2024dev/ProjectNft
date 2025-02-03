@@ -2,22 +2,24 @@
     width: 100%;
     height: 80vh;
   }
-  
+   /* NFT 카드 스타일 */
   .element {
     width: 120px;
     height: 160px;
-    box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.5);
-    border: 1px solid rgba(127, 255, 255, 0.25);
+    background: white;
+    border: 2px solid black;
+    
+    box-shadow: 0px 0px 12px black;
     font-family: Helvetica, sans-serif;
     text-align: center;
     line-height: normal;
     cursor: default;
-    position: relative;
+    position: relative;    
   }
   
   .element:hover {
-    box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.75);
-    border: 1px solid rgba(127, 255, 255, 0.75);
+    box-shadow: 0px 0px 12px black;
+    border: 1px solid black;
   }
   
   .number {
@@ -25,7 +27,7 @@
     top: 20px;
     right: 20px;
     font-size: 12px;
-    color: rgba(127, 255, 255, 0.75);
+    color: black;
   }
   
   .symbol {
@@ -35,8 +37,7 @@
     right: 0px;
     font-size: 60px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.75);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.95);
+    color: black;
   }
   
   .details {
@@ -45,6 +46,6 @@
     left: 0px;
     right: 0px;
     font-size: 12px;
-    color: rgba(127, 255, 255, 0.75);
+    color: black;
   }
   
