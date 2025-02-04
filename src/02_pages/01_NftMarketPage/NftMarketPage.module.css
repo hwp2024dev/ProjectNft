@@ -17,11 +17,6 @@
     position: relative;    
   }
   
-  .element:hover {
-    box-shadow: 0px 0px 12px black;
-    border: 1px solid black;
-  }
-  
   .number {
     position: absolute;
     top: 20px;

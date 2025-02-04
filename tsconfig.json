@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "baseUrl": "./",
     "paths": {
       //vite.config.ts와 같은경로로 설정해준다.
@@ -10,6 +11,7 @@
       "three/examples/jsm/*": ["node_modules/three/examples/jsm/*"],
       "typeRoots": ["./node_modules/@types", "./src/types"]
     },
+    "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true, // JSON도 자동으로 인식

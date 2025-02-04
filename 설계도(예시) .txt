@@ -10,7 +10,7 @@
 4. three.js 추가.
 [2/3]
 5. NftMarketPage에 상품(테이블) 객체 랜더링 기능추가.
-6. 관련 설정 조정.(config부분)
+6. 관련 설정 조정.(tsconfig.json부분)
 
 
 /src
