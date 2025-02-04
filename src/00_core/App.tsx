@@ -9,6 +9,7 @@ import Layout from "@components/00_Layout/Layout.tsx"
 import MainPage from '@pages/00_MainPage/MainPage.tsx'
 import NftMarketPage from '@pages/01_NftMarketPage/NftMarketPage.tsx'
 import NftInfoPage from '@pages/02_NftInfoPage/NftInfoPage.tsx'
+import NftGamePage from '@pages/03_NftGamePage/NftGamePage.tsx'
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path={routes.MainPage} element={<Layout><MainPage /></Layout>} />
                 <Route path={routes.NftMarketPage} element={<Layout><NftMarketPage /></Layout>} />
                 <Route path={routes.NftInfoPage} element={<Layout><NftInfoPage /></Layout>} />
+                <Route path={routes.NftGamePage} element={<Layout><NftGamePage /></Layout>} />
                 <Route path="*" element={<div>404 - Page Not Found</div>} />
             </Routes>
         </>

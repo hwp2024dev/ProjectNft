@@ -20,6 +20,7 @@ function Layout({ children }: { children: React.ReactNode; }) {
           <a href="/" className="text-decoration-none text-reset">Main</a>
           <a href="/NftMarketPage" className="text-decoration-none text-reset">Nft_Market</a>
           <a href="/NftInfoPage" className="text-decoration-none text-reset">NftInfoPage</a>
+          <a href="/NftGamePage" className="text-decoration-none text-reset">NftGamePage</a>
         </nav>
       </header>
       <main className="flex-grow-1" style={{ height: "80vh"}}>

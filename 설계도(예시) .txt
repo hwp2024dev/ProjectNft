@@ -10,7 +10,11 @@
 4. three.js 추가.
 [2/3]
 5. NftMarketPage에 상품(테이블) 객체 랜더링 기능추가.
-6. 관련 설정 조정.(tsconfig.json부분)
+6. 관련 설정 조정(tsconfig.json부분).
+[2/4]
+7. NftMarketPage에 상품(테이블) 객체 랜더링 이미지 및 상세설명 추가(임시내용) -> 블록체인에서 끌어올 예정.
+8. 상품(테이블) 선택시, 테두리 빨강(css) 및 확대/축소(tween.js) 처리.
+9. 페이지 추가(NftGamePage) 및 설계도 수정.
 
 
 /src
@@ -25,11 +29,24 @@
 │         └── LayoutModule.css  -> 상기 파일의 태그에 반응형 css 반영
 │
 ├── 02_pages                    * 2. 페이지 : 각 페이지 관리폴더 *
-│    └── 00_MainPage            -> MainPage 폴더
+│    └──00_MainPage             -> MainPage 폴더
 │    │	  └── MainPage.tsx      -> MainPage 페이지
+│    │    └── MainPage.module.css -> MainPage.module.css
+│    │	
 │    └── 01_NftMarketPage       -> NftMarketPage 폴더   
-│    	  └── NftMarketPage.tsx -> NftMarketPage 페이지
-│	
+│    │	  └── NftMarketPage.tsx -> NftMarketPage 페이지
+│    │    └── NftMarketPage.module.css -> NftMarketPage.module.css
+│    │    └── threeUtils.ts -> NFT객체를 그려주는 three.js 모듈
+│    │	
+│    └── 02_NftInfoPage		-> NftInfoPage 페이지
+│    │	  └── NftInfoPage.tsx -> NftInfoPage 페이지
+│    │    └── NftInfoPage.module.css -> NftInfoPage.module.css
+│    │	
+│    └── 03_NftGamePage		-> NftGamePage 페이지
+│    │	  └── NftGamePage.tsx -> NftGamePage 페이지
+│    │    └── NftGamePage.module.css -> NftGamePage.module.css
+│    
+│    
 ├── 03_assets                   * 3. 프로젝트 참고파일 *
 │    ├── images/                -> 정적 이미지 (로고, 배너 등)
 │    └── fonts/                 -> 폰트 파일 (웹 폰트 포함)
