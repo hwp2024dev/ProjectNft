@@ -1,0 +1,22 @@
+  .mainContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Phaser 캔버스가 삐져나오지 않도록 */
+    background-color: black; /* 배경색이 검은색으로 맞춰져 있는지 확인 */
+    position: relative; /* Phaser 캔버스가 레이아웃에 영향을 주지 않게 */
+  }
+  
+  .title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .gameContainer {
+    width: 800px;
+    height: 600px;
+    border: 3px solid white;
+  }

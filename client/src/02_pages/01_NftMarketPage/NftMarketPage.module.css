@@ -1,0 +1,283 @@
+/* 전체 컨테이너 */
+.container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+/* 1) Three.js 쪽 3D 카드 (.element) */
+.element {
+  width: 120px;
+  height: 160px;
+  background: white;
+  border: 2px solid black;
+  box-shadow: 0px 0px 12px black;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  line-height: normal;
+  cursor: default;
+  position: relative;
+}
+
+.element img {
+  margin-top: -50px; /* 이미지가 너무 아래에 있으면 조정 */
+}
+
+.number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  color: black;
+}
+
+.symbol {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+.details {
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  right: 0px;
+  font-size: 12px;
+  color: black;
+}
+
+/* 2) 좌측 / 우측 영역 (장바구니, 인벤토리) */
+.NFT_HERO_CART {
+  width: 50%;
+  height: 80vh;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  opacity: 1;
+  overflow-y: scroll; /* 항상 스크롤 표시 */
+}
+
+.NFT_HERO_CART img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.NFT_HERO_INFO {
+  width: 50%;
+  height: 80vh;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: blue;
+  opacity: 0.75;
+}
+
+.NFT_HERO_INFO img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+/* 3) 타이틀 (중앙 라인 & 그라디언트 텍스트) */
+.nftHeroTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 12px 0;
+  color: #222;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #555, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+/* 양쪽 라인 스타일 */
+.nftHeroTitle::before,
+.nftHeroTitle::after {
+  content: "";
+  display: inline-block;
+  width: 80px; /* 양쪽 길이 조절 */
+  height: 3px; /* 선 두께 */
+  background-color: #222;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* 배경 + 패딩 */
+.nftHeroContainer {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 4) 임시 버튼 위치 (예시) */
+.nftcartButton {
+  width: 25%;
+  height: 4vh;
+  position: absolute;
+  top: 90%;
+  right: 61%;
+  text-align: center;
+}
+
+.nftcartButton p {
+  padding-top: 10px;
+}
+
+/* 5) Three.js용 추가 클래스 (선택 시 빨간 테두리 등) */
+.nft-item {
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.nft-item.selected {
+  box-shadow: 0 0 15px red;
+  transform: scale(1.05);
+}
+.nft-item.deselected {
+  box-shadow: 0 0 0 transparent;
+  transform: scale(1);
+}
+
+/* 6) 슬라이딩 애니메이션 (좌우 토글) */
+.activeLeft {
+  left: 100%;
+  transition: left 1s ease;
+}
+.inactiveLeft {
+  left: 50%;
+  transition: left 1s ease;
+}
+.activeRight {
+  right: 100%;
+  transition: right 1s ease;
+}
+.inactiveRight {
+  right: 50%;
+  transition: right 1s ease;
+}
+
+/* 7) 공통 리스트 스타일 (카트 / 인벤토리 목록) */
+.cartItemList {
+  list-style: none;
+  padding-left: 0;
+  overflow: visible; /* 애니메이션 중 요소가 잘리지 않도록 */
+}
+
+/* 8) 카트 아이템 (인벤토리 아이템) 카드 */
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border: 1px solid #ddd;
+}
+
+/* 호버 시 약간 위로 올라가며 그림자 */
+.cartItem:has(.removeButton:hover) {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 9) 인벤토리 / 카트 아이템 이미지 */
+.nftImage {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  border: 2px solid #222;
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 아이템 정보 텍스트 */
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.itemPrice {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 제거 버튼 스타일 */
+.removeButton {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.removeButton:hover {
+  background-color: red;
+  color: white;
+}
+
+/* 선택 상태일 때 (인벤토리) 빨간 테두리 */
+.selected {
+  border: 2px solid red;
+}
+
+/* "선택" 버튼 스타일 */
+.selectButton {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.selectButton:hover {
+  background-color: #0056b3;
+}
+
+.nft-item.selected {
+  box-shadow: 0 0 15px red;
+  transform: scale(1.05);
+}
+
+/* 골드 정보 스타일 */
+.goldContainer {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 선택된 아이템의 붉은색 테두리 */
+.selected {
+  border: 3px solid red !important;
+  box-shadow: 0 0 10px red;
+}

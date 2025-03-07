@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #f8f9fa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* 버튼 간격 추가 */
+  margin-top: 20px; /* 버튼 그룹 상단 여백 추가 */
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px; /* 버튼 크기 통일 */
+}
+
+/* 금화 발행 버튼 */
+.mintButton {
+  background-color: #007bff; /* 파란색 버튼 */
+  color: white;
+}
+
+.mintButton:hover {
+  background-color: #0056b3;
+}
+
+/* 로그아웃 버튼 */
+.logoutButton {
+  background-color: #ccc;
+  color: black;
+  margin-top: 10px; /* 금화 발행 버튼과 간격 추가 */
+}
+
+.logoutButton:hover {
+  background-color: #999;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"] {
+  background-color: #ccc;
+  color: black;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

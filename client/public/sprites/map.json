@@ -1,0 +1,45 @@
+{
+  "compressionlevel": -1,
+  "orientation": "orthogonal",
+  "height": 10,
+  "width": 10,
+  "infinite": false,
+  "layers": [
+    {
+      "id": 1,
+      "name": "Ground",
+      "type": "tilelayer",
+      "width": 10,
+      "height": 10,
+      "data": [
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+      ],
+      "opacity": 1,
+      "visible": true
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "name": "tileset_dungeon",
+      "image": "sprites/tileset_dungeon.png",
+      "tilewidth": 32,
+      "tileheight": 32,
+      "margin": 1,
+      "spacing": 1,
+      "columns": 8
+    }
+  ],
+  "tilewidth": 32,
+  "tileheight": 32,
+  "version": "1.4"
+}
